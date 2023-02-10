@@ -9,12 +9,7 @@ resource "aws_instance" "jenkins-instance1" {
   }
 }
   
-required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
+
 
   provider "aws" {
   region = "us-east-1"
@@ -28,5 +23,13 @@ terraform {
     workspaces {
       name = "vb-tfm"
     }
+   required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
+    }
+  }
+    
+    
   }
 }
