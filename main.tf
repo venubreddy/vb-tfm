@@ -15,7 +15,7 @@ resource "aws_instance" "jenkins-instance1" {
   }
 
   provider "aws" {
-  region = "var.aws_region"
+  region = "us-east-1"
 }
 }
 
