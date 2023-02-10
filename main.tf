@@ -1,4 +1,5 @@
 
+
 resource "aws_instance" "jenkins-instance1" {
   ami           = "ami-0b0af3577fe5e3532"
   instance_type = "t2.medium"
@@ -6,8 +7,9 @@ resource "aws_instance" "jenkins-instance1" {
   tags = {
     Name = "venu-vm"
   }
+}
   
-  required_providers {
+required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.0"
@@ -17,7 +19,7 @@ resource "aws_instance" "jenkins-instance1" {
   provider "aws" {
   region = "us-east-1"
 }
-}
+
 
 terraform {
   cloud {
